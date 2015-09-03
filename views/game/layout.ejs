@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Braiv</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="styles/fonts/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <link rel='stylesheet/less' href='/styles/styles.less'>
+        <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
+    </head>
+    <body ng-controller='AppCtrl' class='ng-cloak'>
+        <%- body %>
+        <script>var admin = <%- admin || false %></script>;
+
+        <script type="text/javascript" src="/lib/jquery/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="/lib/jquery/single_double_click.js"></script>
+        <script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <!-- todo: namespace to protect -->
+        <script src="/assets/map/mainland?<%=Math.round(Math.random()*9999)%>" type="text/javascript" charset="utf-8"></script>
+        <script src="/assets/map/underground?<%=Math.round(Math.random()*9999)%>" type="text/javascript" charset="utf-8"></script>
+
+        <!-- legacy -->
+        <script src='/js/application/lib/legacy/main.js'></script>
+        <script src='/js/application/lib/legacy/login.js'></script>
+        <script src='/js/application/lib/legacy/render.js'></script>
+        <script src='/js/application/lib/legacy/player.js'></script>
+        <script src='/js/application/lib/legacy/manager.js'></script>
+        <script src='/js/application/lib/legacy/ui.js'></script>
+        <script src='/js/application/lib/legacy/admin.js'></script>
+        <script src='/js/application/lib/legacy/bank.js'></script>
+        <script src='/js/application/lib/legacy/shop.js'></script>
+        <script src='/js/application/lib/legacy/container.js'></script>
+        <script src='/js/application/lib/legacy/packets.js'></script>
+        <script src='/js/application/lib/legacy/input.js'></script>
+
+        <!-- lib -->
+        <script type="text/javascript" src="/lib/less/less.min.js"></script>
+        <script type="text/javascript" src="/lib/lodash/lodash.min.js"></script>
+        <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="/lib/keymaster/keymaster.min.js"></script>
+        <script type="text/javascript" src="/js/socket.io.js"></script>
+        <script type="text/javascript" src="/js/sails.io.js"></script>
+
+        <!-- Game -->
+        <script type="text/javascript" src="/js/application/lib/Game.js"></script>
+
+        <!-- app -->
+        <script type="text/javascript" src="/js/app.js"></script>
+
+
+        <!-- controllers -->
+        <script type="text/javascript" src="/js/application/controllers/AppCtrl.js"></script>
+        <script type="text/javascript" src="/js/application/controllers/GameCtrl.js"></script>
+        <script type="text/javascript" src="/js/application/controllers/InventoryCtrl.js"></script>
+
+        <script type="text/javascript" src="/js/application/controllers/EditorCtrl.js"></script>
+        <script type="text/javascript" src="/js/application/controllers/FixtureEditorCtrl.js"></script>
+
+        <!-- factories -->
+        <script type="text/javascript" src="/js/application/factories/LocalPlayer.js"></script>
+        <script type="text/javascript" src="/js/application/factories/WorldFixture.js"></script>
+        <script type="text/javascript" src="/js/application/factories/Fixture.js"></script>
+        <script type="text/javascript" src="/js/application/factories/WorldItem.js"></script>
+        <script type="text/javascript" src="/js/application/factories/Item.js"></script>
+        <script type="text/javascript" src="/js/application/factories/WorldNPC.js"></script>
+        <script type="text/javascript" src="/js/application/factories/NPC.js"></script>
+        <script type="text/javascript" src="/js/application/factories/InventoryItem.js"></script>
+
+        <!-- directives -->
+        <script type="text/javascript" src="/js/application/directives/pane.js"></script>
+        <script type="text/javascript" src="/js/application/directives/chat-input.js"></script>
+        <script type="text/javascript" src="/js/application/directives/chat-log.js"></script>
+        <script type="text/javascript" src="/js/application/directives/world-item.js"></script>
+        <script type="text/javascript" src="/js/application/directives/drop-area.js"></script>
+        <script type="text/javascript" src="/js/application/directives/container-item.js"></script>
+        <script type="text/javascript" src="/js/application/directives/container.js"></script>
+        <script type="text/javascript" src="/js/application/directives/placeable-fixture.js"></script>
+
+        <!-- services -->
+        <script type="text/javascript" src="/js/application/services/user.js"></script>
+        <script type="text/javascript" src="/js/application/services/game.js"></script>
+        <script type="text/javascript" src="/js/application/services/assets.js"></script>
+        <script type="text/javascript" src="/js/application/services/input.js"></script>
+        <script type="text/javascript" src="/js/application/services/chat.js"></script>
+        <script type="text/javascript" src="/js/application/services/inventory.js"></script>
+
+    </body>
+</html>

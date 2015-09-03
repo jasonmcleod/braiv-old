@@ -1,0 +1,38 @@
+<div id='container' ng-hide='loggedIn'>
+    <div id='login' ng-controller='LoginCtrl'>
+        <div id='logo'><img src='/images/login-logo.png'></div>
+
+        <!-- login form -->
+        <div id='login-form' ng-hide='authenticated'>
+            <form ng-submit='login()'>
+                <p class='label'>Login</p>
+                <input ng-model='username' type='text'>
+                <p class='label'>Password</p>
+                <input ng-model='password' type='password'>
+                <br>
+                <p class='label'>{{error}}&nbsp;</p>
+                <p class='label'>{{message}}&nbsp;</p>
+                <a ng-click='login()' id='login-button' class='button'>Login</a>
+                <a ng-click='register()' id='register' class='button'>Register</a>
+            </form>
+        </div>
+
+        <!-- character select -->
+        <div id='characters' ng-show='authenticated'>
+            <div ng-hide='creatingCharacter'>
+                <div class='character' ng-repeat='character in characters' character='{{character.id' ng-class='{selected:selected==character.id}' ng-click='select(character.id)' ng-dblclick='select(character.id); enterWorld()'>
+                    <div class='sprite'></div>
+                    {{character.name}}, level {{character.level}} warrior
+                </div>
+                <div class='character empty' ng-repeat='slot in freeSlots track by $index' character='0' ng-show='freeSlots.length>0' ng-click='create()'>
+                    <div class='sprite'></div>
+                    Create a new character
+                </div>
+            </div>
+            <%- include ./newCharacter %>
+        </div>
+
+        <!-- enter world! -->
+        <a ng-click='enterWorld()' id='enter-world' ng-show='authenticated && selected && !creatingCharacter' class='button'>Enter World</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div id='editors' ng-controller='EditorCtrl'>
+    <a class='button' tool='fixtures' ng-click='editingFixtures=!editingFixtures' ng-class='{active:editingFixtures}'>Fixture editor</a>
+    <a class='button' tool='npcs'>NPC editor</a>
+    <a class='button' tool='items'>Item editor</a>
+
+    <div ng-controller='FixtureEditorCtrl' ng-show='editingFixtures' pane class='box'>
+    	<div class='title'>Fixture Editor</div>
+    	<div class='items'>
+    		<div class='sprite' ng-repeat='(key, fixture) in fixtures' index='$index' key='key' placeable-fixture='fixture'></div>
+    	</div>
+    </div>
+</div>

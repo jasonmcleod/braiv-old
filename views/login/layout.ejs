@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+    <head>
+        <title>Braiv</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="styles/fonts/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <link rel='stylesheet/less' href='/styles/styles.less'>
+        <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
+    </head>
+    <body class='ng-cloak'>
+        <%- body %>
+
+        <!-- lib -->
+        <script type="text/javascript" src="/lib/jquery/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="/lib/less/less.min.js"></script>
+        <script type="text/javascript" src="/lib/lodash/lodash.min.js"></script>
+        <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+        <script>var app = angular.module('app',[]);</script>
+
+        <!-- controllers -->
+        <script type="text/javascript" src="/js/application/controllers/LoginCtrl.js"></script>
+        <script type="text/javascript" src="/js/application/controllers/NewCharacterCtrl.js"></script>
+
+        <!-- services -->
+        <script type="text/javascript" src="/js/application/services/user.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!-- todo: make the 4 attributes an ng-repeat -->
+<div ng-controller='NewCharacterCtrl' ng-show='creatingCharacter'>
+    <table width="100%">
+        <tr>
+            <td valign="top" width="25%">Name:</td>
+            <td>
+                <input ng-model='name' name="new-character-name" maxlength="16"><span class="new-character-name-status"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Class:</td>
+            <td><div class="sprite selected"></div></td>
+        </tr>
+        <tr>
+            <td valign="top">Stats:<br>Pool: <span class="new-character-pool">{{pool}}</span></td>
+            <td>
+                <table width="100%" class="new-character-stats">
+                    <tr>
+                        <td>STR:</td>
+                        <td>
+                            <table width="80%">
+                                <tr>
+                                    <td>
+                                        <a ng-click='adjustStat("str",-1)' class="button down">-</a>
+                                    </td>
+                                    <td align="center">
+                                        <span class="new-character-str">{{str}}</span>
+                                        <td align="right">
+                                            <a ng-click='adjustStat("str",1)' class="button up">+</a>
+                                        </td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>DEX:</td>
+                        <td>
+                            <table width="80%">
+                                <tr>
+                                    <td>
+                                        <a ng-click='adjustStat("dex",-1)' class="button down">-</a>
+                                    </td>
+                                    <td align="center">
+                                        <span class="new-character-dex">{{dex}}</span>
+                                        <td align="right">
+                                            <a ng-click='adjustStat("dex",-1)' class="button up">+</a>
+                                        </td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>INT:</td>
+                        <td>
+                            <table width="80%">
+                                <tr>
+                                    <td>
+                                        <a ng-click='adjustStat("int",-1)' class="button down">-</a>
+                                    </td>
+                                    <td align="center">
+                                        <span class="new-character-int">{{int}}</span>
+                                        <td align="right">
+                                            <a ng-click='adjustStat("int",1)' class="button up">+</a>
+                                        </td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>CON:</td>
+                        <td>
+                            <table width="80%">
+                                <tr>
+                                    <td>
+                                        <a ng-click='adjustStat("con",-1)' class="button down">-</a>
+                                    </td>
+                                    <td align="center">
+                                        <span class="new-character-con">{{con}}</span>
+                                        <td align="right">
+                                            <a ng-click='adjustStat("con",1)' class="button up">+</a>
+                                        </td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <a ng-click='create()' id='create-character' ng-show='name!=""' class='button'>Create Character</a>
+    <a ng-click='cancel()' class='button'>Cancel</a>
+</div>
+

@@ -1,0 +1,158 @@
+<canvas id='sprites'></canvas>
+<canvas id='terrain-buffer'></canvas>
+<canvas id='lighting'></canvas>
+<div id='container' ng-controller='GameCtrl'>
+    <div id='debug' ng-show='showEditors'>
+        <div id='cords'></div>
+        <% include partials/editors %>
+    </div>
+
+    <div pane id='shop' ng-show='showShop' class='modal box dialog'>
+        <div class='title'>Shop</div>
+        <div class='items'></div>
+
+        <div id='cart'>
+            <div class='cancel button'>Cancel</div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='slot'></div>
+            <div class='checkout button'>Buy</div>
+            <div class='gold'>Gold: <span class='value'>12345</span></div>
+            <div class='price'>Total Price: <span class='value'>54321</span></div>
+        </div>
+    </div>
+
+    <div id='viewport' container='world'>
+        <div id='me'></div>
+        <canvas id='terrain'></canvas>
+        <div id="items"></div>
+        <div id='viewport-elements'></div>
+        <!-- <div id='droparea' ng-show='showDropArea' drop-area></div> -->
+        <div id='target'><div id='target-value'></div></div>
+    </div>
+
+    <div id='topbar'>
+        <div id='player-hp' class='meter'>
+            <div id='player-hp-value' class='value'></div>
+            <div id='player-hp-label' class='label stroke-white'>{{player.hp}} / {{player.maxHp}}</div>
+        </div>
+
+        <div id='player-xp' class='meter'>
+            <div id='player-xp-value' class='value'></div>
+            <div id='player-xp-label' class='label stroke-white'>{{player.xp}} / {{player.levelCap}}</div>
+        </div>
+
+        <div class='icon' ng-class='{active:showCharacter}' id='icon-character' ng-click='showCharacter=!showCharacter'>
+            <p class='stroke-white'>LVL</p>
+            <p class='stroke-white' id='level'>{{player.level()}}</p>
+        </div>
+        <div class='vSep' style='left:502px; top:2px'></div>
+        <div class='icon' ng-class='{active:showInventory}' id='icon-inventory' ng-click='showInventory=!showInventory'>
+            <p class='stroke-white'>WEIGHT</p>
+            <p class='stroke-white' id='weight'>{{player.weight}} / {{player.weightMax}}</p>
+        </div>
+        <div class='vSep' style='left:620px; top:2px'></div>
+        <div class='icon' id='icon-map' ng-class='{active:showMap}' ng-click='showMap=!showMap'></div>
+        <div class='icon' ng-class='{active:showChat}' ng-click='showChat=!showChat' id='icon-chat'></div>
+        <div class='icon' id='icon-quest'></div>
+
+    </div>
+
+    <div pane class='box' id='map' ng-show='showMap'>
+        <div class='title'>Map</div>
+        <div id='map-image'></div>
+        <div id='map-center-pixel'></div>
+    </div>
+    <div pane class='box' id='inventory' container='inventory' ng-show='showInventory' ng-controller='InventoryCtrl'>
+        <div class='title'>Inventory</div>
+        <div class='items'>
+            <div ng-repeat='item in inventory' container-item='item' class="item sprite" item="{{item.id}}" itemtype="{{item.item}}"></div>
+        </div>
+    </div>
+    <div pane class='box' id='character' ng-show='showCharacter'>
+        <div class='title'>Character</div>
+        <div id='player-info-container'>
+            <span id='player-guild-tag'></span>
+            <span id='player-name'></span>
+            <br>
+            <span id='player-level'></span>
+            <span id='player-class'></span>
+            <ul id='stats-labels'>
+                <li>STR:</li>
+                <li>DEX:</li>
+                <li>CON:</li>
+                <li>INT:</li>
+                <li>ARMOR:</li>
+            </ul>
+            <ul id='stats-values'>
+                <li id='str'>10</li>
+                <li id='dex'>10</li>
+                <li id='con'>10</li>
+                <li id='int'>10</li>
+                <li id='armor'>100</li>
+            </ul>
+            <ul id='stats-points'>
+                <li id='point-str'>+</li>
+                <li id='point-dex'>+</li>
+                <li id='point-con'>+</li>
+                <li id='point-int'>+</li>
+            </ul>
+
+            <div slot='2' id='weapon' class='equipment'></div>
+            <div slot='3' id='shield' class='equipment'></div>
+            <div slot='5' id='helmet' class='equipment'></div>
+            <div slot='4' id='armor' class='equipment'></div>
+        </div>
+    </div>
+    <div pane class='box' id='bank' ng-show='showBank'>
+        <div class='title'>Bank</div>
+        <div class='items'></div>
+    </div>
+
+    <div id='split' class='dialog'>
+        <input type='text' name='split-value' value='50'>
+        <div class='slider'></div>
+        <span class='min'>0</span>
+        <span class='max'>100</span>
+        <span class='value-wrapper'>
+        <div class='modal-actions'>
+            <div class='button split-ok'>Ok</div>
+            <div class='button split-cancel'>Cancel</div>
+        </div>
+    </div>
+
+    <div class='alert dialog'>
+        <div class='title'></div>
+        <div class='message'></div>
+        <div class='modal-actions'>
+            <div class='button alert-ok'>Ok</div>
+        </div>
+    </div>
+
+    <div id='chat-input' ng-show='showChatInput'>
+        <form ng-submit='sendChat()'>
+            <input ng-model='chatText' chat-input type='text'>
+        </form>
+    </div>
+    <div id='chat' chat-log ng-show='showChat'>{{chatLog.length}}
+        <p ng-repeat='chat in chatLog'><span>{{chat.name}}</span>: {{chat.text}}</p>
+    </div>
+    <div id='combatlog'>
+        <ul>
+        </ul>
+    </div>
+
+    <div id='shopBuySell' class='dialog modal box'>
+        <div class='title'>Shop</div>
+        <div class='buy button'>Buy</div>
+        <div class='sell button'>Sell</div>
+    </div>
+</div>
+

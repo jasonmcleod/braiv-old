@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+
+<!--
+-
+- Sequel Pro XML dump
+- Version 4135
+-
+- http://www.sequelpro.com/
+- http://code.google.com/p/sequel-pro/
+-
+- Host: 127.0.0.1 (MySQL 5.5.34)
+- Database: braiv
+- Generation Time Time: 2014-12-03 20:21:40 +0000
+-
+-->
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="braiv">
+
+	<table_structure name="npcs">
+		<field field="id" type="int(11)" null="NO" key="PRI" default="<null>" extra="auto_increment" />
+		<field field="banker" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="hostile" type="tinyint(4)" null="NO" key="" default="<null>" extra="" />
+		<field field="guard" type="int(11)" null="NO" key="" default="0" extra="" />
+		<field field="merchant" type="int(11)" null="YES" key="" default="0" extra="" />
+		<field field="friendly" type="int(11)" null="NO" key="" default="0" extra="" />
+		<field field="level" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="str" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="dex" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="int" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="con" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="name" type="varchar(255)" null="NO" key="" default="<null>" extra="" />
+		<field field="width" type="int(11)" null="NO" key="" default="1" extra="" />
+		<field field="height" type="int(11)" null="NO" key="" default="1" extra="" />
+		<field field="armor" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="minHealth" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="maxHealth" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="sprite" type="varchar(255)" null="NO" key="" default="<null>" extra="" />
+		<field field="walkSpeed" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="wanderRange" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="minDamage" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="maxDamage" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="attackSpeed" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="hitChance" type="int(11)" null="NO" key="" default="<null>" extra="" />
+		<field field="runsShop" type="int(11)" null="YES" key="" default="<null>" extra="" />
+
+		<options name="npcs" engine="MyISAM" version="10" row_format="Dynamic" rows="17" avg_row_length="81" data_length="1380" max_data_length="281474976710655" index_length="2048" data_free="0" create_time="2014-12-02 13:43:09" update_time="2014-12-02 13:43:09" collation="latin1_swedish_ci" create_options="" comment="" />
+	</table_structure>
+
+	<table_data name="npcs">
+
+	<row>
+		<field name="id">1</field>
+		<field name="banker">0</field>
+		<field name="hostile">0</field>
+		<field name="guard">1</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">0</field>
+		<field name="str">0</field>
+		<field name="dex">0</field>
+		<field name="int">0</field>
+		<field name="con">0</field>
+		<field name="name">Guard</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">1800</field>
+		<field name="maxHealth">2000</field>
+		<field name="sprite">guard</field>
+		<field name="walkSpeed">0</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">40</field>
+		<field name="maxDamage">60</field>
+		<field name="attackSpeed">300</field>
+		<field name="hitChance">80</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">2</field>
+		<field name="banker">0</field>
+		<field name="hostile">0</field>
+		<field name="guard">0</field>
+		<field name="merchant">1</field>
+		<field name="friendly">1</field>
+		<field name="level">0</field>
+		<field name="str">0</field>
+		<field name="dex">0</field>
+		<field name="int">0</field>
+		<field name="con">0</field>
+		<field name="name">Merchant</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">180</field>
+		<field name="maxHealth">200</field>
+		<field name="sprite">man</field>
+		<field name="walkSpeed">1500</field>
+		<field name="wanderRange">4</field>
+		<field name="minDamage">20</field>
+		<field name="maxDamage">50</field>
+		<field name="attackSpeed">400</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">1</field>
+	</row>
+
+	<row>
+		<field name="id">3</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">1</field>
+		<field name="str">0</field>
+		<field name="dex">0</field>
+		<field name="int">0</field>
+		<field name="con">0</field>
+		<field name="name">Snake</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">4</field>
+		<field name="maxHealth">18</field>
+		<field name="sprite">snake</field>
+		<field name="walkSpeed">1100</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">1</field>
+		<field name="maxDamage">4</field>
+		<field name="attackSpeed">4000</field>
+		<field name="hitChance">50</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">4</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">4</field>
+		<field name="str">3</field>
+		<field name="dex">5</field>
+		<field name="int">1</field>
+		<field name="con">5</field>
+		<field name="name">Orc</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">90</field>
+		<field name="maxHealth">112</field>
+		<field name="sprite">orc</field>
+		<field name="walkSpeed">500</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">8</field>
+		<field name="maxDamage">18</field>
+		<field name="attackSpeed">1200</field>
+		<field name="hitChance">80</field>
+		<field name="runsShop" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="id">34</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">2</field>
+		<field name="str">1</field>
+		<field name="dex">2</field>
+		<field name="int">1</field>
+		<field name="con">1</field>
+		<field name="name">Rat</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">1</field>
+		<field name="minHealth">6</field>
+		<field name="maxHealth">18</field>
+		<field name="sprite">rat</field>
+		<field name="walkSpeed">200</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">2</field>
+		<field name="maxDamage">8</field>
+		<field name="attackSpeed">1500</field>
+		<field name="hitChance">85</field>
+		<field name="runsShop" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="id">46</field>
+		<field name="banker">1</field>
+		<field name="hostile">0</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">1</field>
+		<field name="level">1</field>
+		<field name="str">1</field>
+		<field name="dex">1</field>
+		<field name="int">1</field>
+		<field name="con">1</field>
+		<field name="name">Banker</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">100</field>
+		<field name="maxHealth">200</field>
+		<field name="sprite">banker</field>
+		<field name="walkSpeed">1000</field>
+		<field name="wanderRange">5</field>
+		<field name="minDamage">30</field>
+		<field name="maxDamage">40</field>
+		<field name="attackSpeed">1000</field>
+		<field name="hitChance">80</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">47</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">1</field>
+		<field name="str">1</field>
+		<field name="dex">1</field>
+		<field name="int">2</field>
+		<field name="con">1</field>
+		<field name="name">Black Ant</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">2</field>
+		<field name="minHealth">36</field>
+		<field name="maxHealth">44</field>
+		<field name="sprite">ant_black</field>
+		<field name="walkSpeed">900</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">1</field>
+		<field name="maxDamage">2</field>
+		<field name="attackSpeed">3500</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">48</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">2</field>
+		<field name="str">0</field>
+		<field name="dex">0</field>
+		<field name="int">0</field>
+		<field name="con">0</field>
+		<field name="name">Beetle</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">3</field>
+		<field name="minHealth">45</field>
+		<field name="maxHealth">56</field>
+		<field name="sprite">beatle_purple</field>
+		<field name="walkSpeed">1500</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">1</field>
+		<field name="maxDamage">3</field>
+		<field name="attackSpeed">1100</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">54</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">12</field>
+		<field name="str">12</field>
+		<field name="dex">15</field>
+		<field name="int">5</field>
+		<field name="con">19</field>
+		<field name="name">Green Ghost</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">252</field>
+		<field name="maxHealth">310</field>
+		<field name="sprite">greenghost</field>
+		<field name="walkSpeed">500</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">40</field>
+		<field name="maxDamage">60</field>
+		<field name="attackSpeed">500</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="id">50</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">3</field>
+		<field name="str">5</field>
+		<field name="dex">5</field>
+		<field name="int">1</field>
+		<field name="con">4</field>
+		<field name="name">Bat</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">40</field>
+		<field name="maxHealth">60</field>
+		<field name="sprite">bat</field>
+		<field name="walkSpeed">250</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">8</field>
+		<field name="maxDamage">16</field>
+		<field name="attackSpeed">1150</field>
+		<field name="hitChance">90</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">52</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">0</field>
+		<field name="str">7</field>
+		<field name="dex">12</field>
+		<field name="int">1</field>
+		<field name="con">12</field>
+		<field name="name">Skeleton</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">30</field>
+		<field name="minHealth">19000</field>
+		<field name="maxHealth">22000</field>
+		<field name="sprite">skeleton</field>
+		<field name="walkSpeed">900</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">12</field>
+		<field name="maxDamage">20</field>
+		<field name="attackSpeed">500</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="id">53</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">0</field>
+		<field name="str">0</field>
+		<field name="dex">0</field>
+		<field name="int">0</field>
+		<field name="con">0</field>
+		<field name="name">Zombie</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">50000</field>
+		<field name="maxHealth">21000</field>
+		<field name="sprite">zombie</field>
+		<field name="walkSpeed">1000</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">80</field>
+		<field name="maxDamage">110</field>
+		<field name="attackSpeed">800</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop" xsi:nil="true" />
+	</row>
+
+	<row>
+		<field name="id">55</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">0</field>
+		<field name="str">7</field>
+		<field name="dex">7</field>
+		<field name="int">7</field>
+		<field name="con">7</field>
+		<field name="name">Undead Mage</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">300</field>
+		<field name="maxHealth">400</field>
+		<field name="sprite">undeadmage</field>
+		<field name="walkSpeed">450</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">30</field>
+		<field name="maxDamage">48</field>
+		<field name="attackSpeed">500</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">56</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">0</field>
+		<field name="str">10</field>
+		<field name="dex">10</field>
+		<field name="int">10</field>
+		<field name="con">10</field>
+		<field name="name">Orc Giant</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">10</field>
+		<field name="minHealth">325</field>
+		<field name="maxHealth">450</field>
+		<field name="sprite">orcgiant</field>
+		<field name="walkSpeed">400</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">18</field>
+		<field name="maxDamage">30</field>
+		<field name="attackSpeed">850</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">61</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">8</field>
+		<field name="str">10</field>
+		<field name="dex">10</field>
+		<field name="int">10</field>
+		<field name="con">10</field>
+		<field name="name">Ogre</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">10</field>
+		<field name="minHealth">171</field>
+		<field name="maxHealth">210</field>
+		<field name="sprite">ogre</field>
+		<field name="walkSpeed">500</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">23</field>
+		<field name="maxDamage">40</field>
+		<field name="attackSpeed">800</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	<row>
+		<field name="id">64</field>
+		<field name="banker">0</field>
+		<field name="hostile">0</field>
+		<field name="guard">0</field>
+		<field name="merchant">1</field>
+		<field name="friendly">0</field>
+		<field name="level">6</field>
+		<field name="str">2</field>
+		<field name="dex">3</field>
+		<field name="int">2</field>
+		<field name="con">4</field>
+		<field name="name">Bartender</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">40</field>
+		<field name="minHealth">113</field>
+		<field name="maxHealth">139</field>
+		<field name="sprite">man</field>
+		<field name="walkSpeed">1500</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">20</field>
+		<field name="maxDamage">40</field>
+		<field name="attackSpeed">500</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">4</field>
+	</row>
+
+	<row>
+		<field name="id">68</field>
+		<field name="banker">0</field>
+		<field name="hostile">1</field>
+		<field name="guard">0</field>
+		<field name="merchant">0</field>
+		<field name="friendly">0</field>
+		<field name="level">10</field>
+		<field name="str">14</field>
+		<field name="dex">10</field>
+		<field name="int">2</field>
+		<field name="con">6</field>
+		<field name="name">Ettin</field>
+		<field name="width">1</field>
+		<field name="height">1</field>
+		<field name="armor">0</field>
+		<field name="minHealth">250</field>
+		<field name="maxHealth">425</field>
+		<field name="sprite">ettin</field>
+		<field name="walkSpeed">1400</field>
+		<field name="wanderRange">0</field>
+		<field name="minDamage">30</field>
+		<field name="maxDamage">55</field>
+		<field name="attackSpeed">600</field>
+		<field name="hitChance">100</field>
+		<field name="runsShop">0</field>
+	</row>
+
+	</table_data>
+
+</database>
+</mysqldump>

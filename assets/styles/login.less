@@ -1,0 +1,112 @@
+#login {
+    width:760px;
+    height:600px;
+    position:relative;
+    background:url(/images/bg-login.jpg);
+}
+#logo {
+/*    display:none;*/
+    position:absolute;
+    top:105px;
+    left:157px;
+}
+
+#login .label {
+    color:white;
+    font-family: 'DavidDeviceregular';
+    font-size: 17px;
+    margin:6px 0;
+}
+#login .label.error {
+    color:red;
+    text-align:center;
+}
+
+#login-form {
+    position:absolute;
+    bottom:0px;
+    left:280px;
+}
+
+#login input {
+    font-family: 'DavidDeviceregular';
+    font-size: 17px;
+
+    border-image:url(/images/boxBorder.png) 12 12 12 12 stretch stretch;
+    border-width:12px;
+    background-image:url(/images/boxBackground.png);
+    width:220px;
+    padding:5px;
+    color:white;
+}
+#login-button, #enter-world, #register {
+    width:109px;
+}
+#create-character {
+    margin-left:90px;
+    margin-top:20px;
+}
+
+#characters {
+    font-family: 'DavidDeviceregular';
+    font-size: 17px;
+    position:absolute;
+    bottom:44px;
+    height:185px;
+    left:180px;
+    border-image:url(/images/boxBorder.png) 12 12 12 12 stretch stretch;
+    border-width:12px;
+    background-image:url(/images/boxBackground.png);
+    width:420px;
+    padding:5px;
+    color:white;
+    /*display:none;*/
+}
+
+#characters .character {
+    background:rgba(255,255,255,.1);
+    line-height:20px;
+    padding:10px;
+    margin-bottom:2px;
+}
+
+#characters .character.selected {
+    background:rgba(0,255,0,.1);
+    line-height:20px;
+    padding:10px;
+    margin-bottom:2px;
+}
+
+#characters .sprite {
+    background:url(/pcs/warrior.png);
+    width:32px;
+    position:relative;
+    float:left;
+    height:32px;
+    margin-right:10px;
+}
+#characters .character .sprite {
+    left:-2px;
+    top:-8px;
+
+}
+#characters .character.empty .sprite {
+    background:url(/images/player-gray.png);
+}
+
+#characters input[name="new-character-name"] {
+    width:164px;
+}
+
+#characters .button {
+    padding:1px 6px;
+}
+#characters .sprite.selected {
+    border:2px solid white;
+}
+#enter-world {
+    /*display:none;*/
+    position: absolute;
+    bottom: 0px;
+    left: 339px;
+}
